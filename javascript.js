@@ -28,7 +28,7 @@ const getHumanChoice = () => {
 const playRound = (humanChoice, computerChoice) => {
     if (humanChoice == 'rock') {
         if (computerChoice == 'rock') {
-            console.log('Draw!');
+            console.log('Draw!');   
         }
         else if (computerChoice == 'paper') {
             console.log('You lose!');
