@@ -1,0 +1,112 @@
+:root {
+    --cyan: #244855;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 32px 8px;
+}
+
+.title {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    text-transform: uppercase;
+    font-size: 48px;
+}
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.choice-title {
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.choices {
+    display: flex;
+    justify-content: center;
+    gap: 128px;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 64px;
+}
+
+.choice {
+    /* flex-grow: 1; */
+    flex-basis: 160px;
+    /* display: flex;
+    flex-direction: column;
+    align-items: center; */
+    text-align: center;
+    cursor: pointer;
+}
+
+.choice > svg {
+    margin-bottom: 32px;
+    /* width: 400px; */
+}
+
+.choice > p {
+    font-size: 32px;
+}
+
+.outcome {
+    display: flex;
+    text-align: center;
+    font-size: 24px;
+    flex-wrap: wrap;
+}
+
+.outcome-text {
+    padding: 8px;
+    flex: 0.5;
+    flex-shrink: 0;
+}
+
+.outcome-text > h3, .outcome-text > p {
+    margin-bottom: 32px;
+}
+
+.start {
+    padding: 12px 24px;
+    font-size: 24px;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: white;
+}
+
+.lives {
+    display: flex;
+    margin-bottom: 32px;
+}
+
+.lives > h4 {
+    flex: 0.5;
+    text-align: center;
+}
+
+.outcome-choice {
+    padding: 8px;
+    flex: 0.25;
+}
+
+.outcome-choice > h4 {
+    margin-bottom: 32px;
+}
