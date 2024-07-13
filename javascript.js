@@ -4,6 +4,11 @@ let startGame = false;
 const startGameParent = document.querySelector('.outcome-text');
 const playerChoices = document.querySelectorAll('.choice');
 
+const playerOutcome = document.querySelector('.player-choice');
+const computerOutcome = document.querySelector('.bot-choice');
+const textOutcome = document.querySelector('.outcome-text');
+const choiceTitle = document.querySelector('.choice-title');
+
 const svgs = {'rock': `
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="160" height="160" color="#000000" fill="none">
                         <path d="M17 14.5C17 18.6421 13.6421 22 9.5 22C5.35786 22 2 18.6421 2 14.5C2 10.3579 5.35786 7 9.5 7C13.6421 7 17 10.3579 17 14.5Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
@@ -31,10 +36,6 @@ const svgs = {'rock': `
 
 startGameParent.addEventListener('click', (event) => {
     if (event.target.classList.contains('start')) {
-        const playerOutcome = document.querySelector('.player-choice');
-        const computerOutcome = document.querySelector('.bot-choice');
-        const textOutcome = document.querySelector('.outcome-text');
-        const choiceTitle = document.querySelector('.choice-title');
 
         startGame = true;
         playerLives = 5;
@@ -91,8 +92,6 @@ const playRound = (playerChoice, computerChoice) => {
 }
 
 const showOutcome = (playerChoice, computerChoice, lastRoundWinner) => {
-    const textOutcome = document.querySelector('.outcome-text');
-
     const textsOutcome = getTextOutcome(lastRoundWinner);
 
     showChoices(playerChoice, computerChoice);
@@ -108,8 +107,6 @@ const showOutcome = (playerChoice, computerChoice, lastRoundWinner) => {
 }
 
 const endGame = (playerChoice, computerChoice, lastRoundWinner) => {
-    const textOutcome = document.querySelector('.outcome-text');
-
     const gameWinner = findGameWinner();
 
     const textsOutcome = getTextOutcome(lastRoundWinner)
@@ -135,10 +132,6 @@ const endGame = (playerChoice, computerChoice, lastRoundWinner) => {
 
 
 const showChoices = (playerChoice, computerChoice) => {
-
-    const playerOutcome = document.querySelector('.player-choice');
-    const computerOutcome = document.querySelector('.bot-choice');
-
     playerOutcome.innerHTML = `
     <h4>You chose:</h4>
     ${svgs[playerChoice]}
